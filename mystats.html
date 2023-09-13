@@ -14,6 +14,7 @@
     <a href="index.html">index link</a>
 
     <hr>
+   <h3>******Table******</h3>
     <table>
         <tr>
             <th>Sport</th>
@@ -44,3 +45,40 @@
         
     </tr>
     </table>
+
+    <hr>
+   <h3>******Code Snippet******</h3>
+
+   <blockquote cite="https://stackoverflow.com/questions/36220256/angular-cli-sass-options">
+    Angular CLI SASS options</blockquote>
+    <a href="https://stackoverflow.com/questions/36220256/angular-cli-sass-options">stackoverflow question</a>
+   
+    <pre>
+        @function opposite-direction($directions) {
+            $opposite-directions: ();
+            $direction-map: (
+              'top':    'bottom',
+              'right':  'left',
+              'bottom': 'top',
+              'left':   'right',
+              'center': 'center',
+              'ltr':    'rtl',
+              'rtl':    'ltr'
+            );
+           
+            @each $direction in $directions {
+              $direction: to-lower-case($direction);
+              
+              @if map-has-key($direction-map, $direction) { 
+                $opposite-directions: append($opposite-directions, unquote(map-get($direction-map, $direction)));
+              } @else {
+                @warn "No opposite direction can be found for `#{$direction}`. Direction omitted.";
+              }
+            }
+           
+            @return $opposite-directions;
+          }
+   </pre>
+   <a href="https://css-tricks.com/snippets/sass/opposite-direction-function/"> Sass code</a>
+
+
